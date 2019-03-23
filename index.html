@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BMI-Calc</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/script/app.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-4">BMI Calculation</h1>
+        <p class="lead">
+          A simple BMI calculator based off your height,weight and age. This app
+          will give you your calculation and provide additional information in
+          the pages attached to bring your BMI Calculation to healthy.
+        </p>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">BMI Calculator</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href=""
+                >Underweight <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Healthy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Overweight</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                >Obese <span class="sr-only"></span
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div id="main">
+        <div class="row">
+          <div class="card col-md-6 margin=100px" style="width: 18rem;">
+            <div id="firstCard" class="card-body">
+              <h5 class="card-title">BMI Calculator</h5>
+              <p class="card-text">
+                Enter in your height,age and weight within the calculator and it
+                will give you your BMI Index.
+              </p>
+              <form>
+                <div class="form-group">
+                  <label for="height">Enter Your Height in Centimeters</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="height"
+                    placeholder="Enter Height"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="weight">Enter Your Weight in Kilograms</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="weight"
+                    placeholder="Enter Your Weight"
+                  />
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="BMI-Submit">
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="card col-md-6" style="width: 18rem;">
+            <div class="BMI Categories">
+              <h5 class="card-title">BMI Index</h5>
+              <p class="card-text">
+                click the button below your results to learn more on how to
+                bring it back to healthy.
+              </p>
+              <p class="index-results">
+                Underweight = 18.5
+                <br />
+                Normal weight = 18.5–24.9
+                <br />
+                Overweight = 25–29.9
+                <br />
+                Obesity = BMI of 30 or greater
+                <br />
+              </p>
+              <a href="#" class="btn btn-primary">BMI Results</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
