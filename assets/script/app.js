@@ -30,7 +30,7 @@ $(document).ready(function() {
     });
   });
 
-  //function that displays results 
+  //function that displays results
   function showResults(bmi) {
     if (bmi < 18.5) {
       $("#main").empty();
@@ -40,19 +40,25 @@ $(document).ready(function() {
       showVideos("how to gain weight");
     } else if (18.5 < bmi < 24.9) {
       $("#main").empty();
-      $("#main").append("<p>How to Maintain a Healthy BMI: Whatever you have been doing so far to maintain a healthy BMI-keep on following that routine. Regular exercises is crucial for the body to burn calories and build muscles which can in turn help burn more calories even when you’re not working out. It is important to be cautious of what you’re eating as not only does your body need a number of calories a day but it needs the appropriate nutrients as well. Ensure you are giving your body 5 servings of fruits and vegetables a day with the nutrients and minerals you need.</p>");
+      $("#main").append(
+        "<p>How to Maintain a Healthy BMI: Whatever you have been doing so far to maintain a healthy BMI-keep on following that routine. Regular exercises is crucial for the body to burn calories and build muscles which can in turn help burn more calories even when you’re not working out. It is important to be cautious of what you’re eating as not only does your body need a number of calories a day but it needs the appropriate nutrients as well. Ensure you are giving your body 5 servings of fruits and vegetables a day with the nutrients and minerals you need.</p>"
+      );
       showVideos("maintain fitness");
     } else if (25 < bmi < 29.9) {
       $("#main").empty();
-      $("#main").append("<p>How To Reduce your BMI to Healthy: Tracking your calories daily can assist you with understanding where your highest calorie dense meals are coming from. It is important you do not drastically reduce your calorie account as your body also needs time to adjust. Removing foods high in carbs and substituting with fruits and vegetables can provide your body with the necessary nutrients but also be light in calories. It is critical you begin working out, after consulting a doctor. Create a workout plan that focuses on cardio and other high intensity workouts that get your heart pumping and causes you to sweat. Consider joining the gym, or a active sport such as swimming or dance. Not only will working out cause your body to burn calories and in turn lose weight you are also helping your heart get stronger. Working out and an overall healthy/active lifestyle will also force you to stay motivated and on track. You have to remember that working out will take time to see progress but you must remember how crucial it is for your body, heart and mind to stay focused.</p>");
+      $("#main").append(
+        "<p>How To Reduce your BMI to Healthy: Tracking your calories daily can assist you with understanding where your highest calorie dense meals are coming from. It is important you do not drastically reduce your calorie account as your body also needs time to adjust. Removing foods high in carbs and substituting with fruits and vegetables can provide your body with the necessary nutrients but also be light in calories. It is critical you begin working out, after consulting a doctor. Create a workout plan that focuses on cardio and other high intensity workouts that get your heart pumping and causes you to sweat. Consider joining the gym, or a active sport such as swimming or dance. Not only will working out cause your body to burn calories and in turn lose weight you are also helping your heart get stronger. Working out and an overall healthy/active lifestyle will also force you to stay motivated and on track. You have to remember that working out will take time to see progress but you must remember how crucial it is for your body, heart and mind to stay focused.</p>"
+      );
       showVideos("overweight tips");
     } else if (bmi >= 30) {
       $("#main").empty();
-      $("#main").append("<p>How to fight Obesity: Obesity is a chronic disease that is affecting more and more children. Obesity can begin slow and as your body adjusts to your heavy calorie intakes you may not realize the changes at first. The weight on your body can cause tremendous issues for your heart and organs.  You MUST stay focused with your diet of eating 5-6 servings of fruits and veggies a day and tracking your calories. Its important to weight yourself regularly so you can ensure you are staying on track and seeing results. You should aim to accumulate atleast 30 minutes of cardio workouts every day of the week.  It can be helpful to get a personal trainer in this time to keep you on track.</p>");
+      $("#main").append(
+        "<p>How to fight Obesity: Obesity is a chronic disease that is affecting more and more children. Obesity can begin slow and as your body adjusts to your heavy calorie intakes you may not realize the changes at first. The weight on your body can cause tremendous issues for your heart and organs.  You MUST stay focused with your diet of eating 5-6 servings of fruits and veggies a day and tracking your calories. Its important to weight yourself regularly so you can ensure you are staying on track and seeing results. You should aim to accumulate atleast 30 minutes of cardio workouts every day of the week.  It can be helpful to get a personal trainer in this time to keep you on track.</p>"
+      );
       showVideos("training obese clients");
     }
   }
- 
+
   //function to display videos
   function showVideos(r) {
     query = r;
@@ -98,4 +104,6 @@ $(document).ready(function() {
       }
     });
   }
+
+  $("#signUp").on("click", function() {});
 });
