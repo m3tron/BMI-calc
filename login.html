@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="assets/style/style.css" />
-    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.js"
       integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -55,6 +55,63 @@
           </ul>
         </div>
       </nav>
+      <form>
+        <div class="form-group">
+          <label for="inputEmail">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="inputEmail"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >We'll never share your email with anyone else.</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="inputPassword">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="inputPassword"
+            placeholder="Password"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="signUpBtn">
+          Submit
+        </button>
+      </form>
+
+      <form>
+        <div class="form-group">
+          <label for="inputLoginEmail">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="inputLoginEmail"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >We'll never share your email with anyone else.</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="inputLoginPassword">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="inputLoginPassword"
+            placeholder="Password"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="loginBtn">
+          Login
+        </button>
+      </form>
     </div>
   </body>
 </html>

@@ -105,5 +105,23 @@ $(document).ready(function() {
     });
   }
 
-  $("#signUp").on("click", function() {});
+  function signUpNewUser(email, password) {
+    auth.createUserWithEmailAndPassword(email, password);
+  }
+
+  function loginUser(email, password) {
+    auth.signInWithEmailAndPassword(email, password).then(alert("teehee"));
+  }
+
+  $("#signUpBtn").on("click", function() {
+    var email = $("#inputEmail").val();
+    var password = $("#inputPassword").val();
+    signUpNewUser(email, password);
+  });
+
+  $("#loginBtn").on("click", function() {
+    var email = $("#inputLoginEmail").val();
+    var password = $("#inputLoginPassword").val();
+    loginUser(email, password);
+  });
 });
