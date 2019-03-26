@@ -1,17 +1,3 @@
-// Initialize Firebase
-var config = {
-  apiKey: "AIzaSyCs-6ABDYOHNe65EtOAIGzWsPzctQiNMAU",
-  authDomain: "bmi-calc-fbdee.firebaseapp.com",
-  databaseURL: "https://bmi-calc-fbdee.firebaseio.com",
-  projectId: "bmi-calc-fbdee",
-  storageBucket: "bmi-calc-fbdee.appspot.com",
-  messagingSenderId: "102252777650"
-};
-firebase.initializeApp(config);
-
-var database = firebase.database();
-var auth = firebase.auth();
-
 $(document).ready(function() {
   $("#BMI-Submit").on("click", function(e) {
     e.preventDefault();
@@ -105,21 +91,6 @@ $(document).ready(function() {
     });
   }
 
-  function signUpNewUser(email, password) {
-    auth.createUserWithEmailAndPassword(email, password);
-  }
-
-  function loginUser(email, password) {
-    auth
-      .signInWithEmailAndPassword(email, password)
-      .then(alert("teehee"))
-      .catch(function(error) {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        console.log(error.code, error.message);
-      });
-  }
-
   $("#signUpBtn").on("click", function(e) {
     e.preventDefault();
     var email = $("#inputEmail").val();
@@ -129,8 +100,18 @@ $(document).ready(function() {
 
   $("#loginBtn").on("click", function(e) {
     e.preventDefault();
-    var email = $("#inputLoginEmail").val();
-    var password = $("#inputLoginPassword").val();
+    var email = $("#inputEmail").val();
+    var password = $("#inputPassword").val();
     loginUser(email, password);
   });
+
+  $("#signOut").on("click", function(e) {
+    e.preventDefault();
+    auth.signOut().then(console.log("sign out success"));
+    window.location.replace("login.html");
+  });
+
+  /* $("#myModal").on("shown.bs.modal", function() {
+    $("#myInput").trigger("focus");
+  }); */
 });

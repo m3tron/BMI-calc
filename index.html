@@ -28,6 +28,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script src="assets/script/login.js"></script>
     <script src="assets/script/app.js"></script>
   </head>
   <body>
@@ -41,7 +42,7 @@
         </p>
       </div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">BMI Calculator</a>
+        <a class="navbar-brand" href="login.html">BMI Calculator</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -57,9 +58,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href=""
-                >Underweight <span class="sr-only">(current)</span></a
-              >
+              <a class="nav-link" href="#">Underweight</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Healthy</a>
@@ -68,13 +67,15 @@
               <a class="nav-link" href="#">Overweight</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"
-                >Obese <span class="sr-only"></span
-              ></a>
+              <a class="nav-link" href="#">Obese</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="signOut">Sign Out</a>
             </li>
           </ul>
         </div>
       </nav>
+
       <div id="main">
         <div class="row">
           <div class="card col-md-6 margin=100px" style="width: 18rem;">
