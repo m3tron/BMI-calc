@@ -14,11 +14,22 @@ var auth = firebase.auth();
 
 auth.onAuthStateChanged(function(user) {
   if (user) {
-    console.log("logged IN ", user);
-    //window.location.replace("index.html");
+    console.log("logged IN ", user.uid);
+    //event.preventDefault();
+    //if (user != null) {
+    location.replace("index.html");
+    //} else location.replace("login.html");
+    //$("#indexBody").show();
+    //$("#loginBody").hide();
   } else {
     console.log("not logged in ", user);
-    //window.location.replace("login.html");
+    //event.preventDefault();
+    //if (user != null) {
+    location.replace("login.html");
+    //} else location.replace("login.html");
+    // $("#indexBody").hide();
+    //$("#loginBody").show();
+    //location.assign("login.html");
   }
 });
 
@@ -33,11 +44,12 @@ function loginUser(email, password) {
       //need to clear text boxes after login/signup/signout/etc...
       // $("#inputEmail").text("");
       // $("#inputPassword").text("");
-      window.location.replace("index.html");
+      //window.location.replace("index.html");
     })
     .catch(function(error) {
       var errorCode = error.code;
       var errorMessage = error.message;
+      //window.location.replace("login.html");
       console.log(error.code, error.message);
     });
 }
