@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BMI-Calc</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+
+
+<body id="indexBody">
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1 class="display-4">BMI Calculation</h1>
+            <p class="lead">
+                A simple BMI calculator based off your height,weight and age. This app
+                will give you your calculation and provide additional information in
+                the pages attached to bring your BMI Calculation to healthy.
+            </p>
+        </div>
+        <div id="main">
+            <div class="row">
+                <div class="card col-md-6 margin=100px" style="width: 18rem;">
+                    <div id="firstCard" class="card-body">
+                        <h5 class="card-title">Your Current Goals</h5>
+                        <p class="card-text">
+                            Enter in your current goals so you can look back and remind yourself where you're headed.
+                        </p>
+                        <form>
+                            <div class="form-group">
+                                <label for="date">Enter Todays Date</label>
+                                <input type="date" class="form-control" id="currentDate"
+                                    placeholder="Enter Current Date" />
+                            </div>
+                            <div class="form-group">
+                                <label for="goals">Enter Your Health Goals</label>
+                                <input type="text" class="form-control" id="goals" placeholder="Enter Your Goals" />
+                                <button type="submit" class="btn btn-primary" id="Goals-Submit">
+                                    Submit
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card col-md-6" style="width: 18rem;">
+                    <div class="yourGoals">
+                        <h5 class="card-title">What Are Your Goals?</h5>
+                        <p class="display goals">
+                            will display goals...
+                    </div>
+                </div>
+
+                </canvas><canvas id="myChart"></canvas>
+
+
+                <script>
+
+                    var ctx = document.getElementById('myChart').getContext('2d');
+                    var myChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: ['A', 'T', 'W', 'T', 'F', 'S', 'S'],
+                            datasets: [{
+                                label: 'BMI',
+                                data: [12, 19, 3, 17, 6, 3, 7],
+                                backgroundColor: "rgba(153,255,51,0.4)"
+
+                            }]
+                        }
+                    });
+                </script>
