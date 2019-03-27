@@ -11,6 +11,9 @@ $(document).ready(function() {
         "Click here to go to your results " +
         "<button type='submit' class='btn btn-primary' id='resultsPage'>Click Here</button>"
     );
+    writeUserData(userId, email, weight, bmi);
+    retrieveList(userId);
+    populateList(userId, weight, bmi);
     $("#resultsPage").on("click", function() {
       showResults(bmi);
     });
