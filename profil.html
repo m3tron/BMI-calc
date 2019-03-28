@@ -59,9 +59,9 @@
                                 <input type="date" class="form-control" id="currentDate"
                                     placeholder="Enter Current Date" />
                             </div>
-                            <div class="form-group">
+                            <div class="form-group" id="goals">
                                 <label for="goals" id="enter">Enter Your Health Goals</label>
-                                <input type="text" class="form-control" id="goals" placeholder="Enter Your Goals" />
+                                <input type="text" class="form-control" id="goals1" placeholder="Enter Your Goals" />
                                 <button type="submit" class="btn btn-primary" id="Goals-Submit">
                                     Submit
                                 </button>
@@ -81,7 +81,12 @@
                 </canvas><canvas id="myChart"></canvas>
 
                 <script>
-
+                    $("#Goals-Submit").on("click", function (e) {
+                        var goals = $("#goals1").val();
+                        e.preventDefault();
+                        $("#yourcurretGoals").empty();
+                        $("#yourcurretGoals").append(goals);
+                    });
                     var ctx = document.getElementById('myChart').getContext('2d');
                     var myChart = new Chart(ctx, {
                         type: 'line',
