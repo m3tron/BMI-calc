@@ -14,18 +14,16 @@ function populateList(userId, weight, bmi) {
 var beemer = [];
 function retrieveBmi() {
   var data = database.ref("users/" + userId + "/userData/");
-
+  var bmiList = [];
   data.on("value", function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
       var childData = childSnapshot.val();
       var childBmi = childData.bmi;
-      beemer.push(childBmi);
+      bmiList.push(parseFloat(childBmi));
     });
   });
-  //var bmiList = [];
-  //bmiList.pop();
-  // return bmiList;
-  console.log(beemer);
+
+  return bmiList;
 }
 
 function retrieveDate() {

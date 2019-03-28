@@ -1,13 +1,13 @@
 function renderChart() {
-  retrieveBmi();
-  var userBmi = beemer;
+  /* var userBmi = retrieveBmi();
+
   var userDate = retrieveDate();
   var userWeight = retrieveWeight();
-  console.log(userBmi);
+ */
+  /* setTimeout(function(){
 
-  setTimeout(function() {
-    chartInfo(userBmi);
-  }, 2000);
+  }) */
+  chartInfo();
 }
 
 function chartInfo(yData) {
@@ -19,7 +19,7 @@ function chartInfo(yData) {
       data: [
         {
           label: "num",
-          data: yData
+          data: retrieveBmi()
         }
       ]
     },
