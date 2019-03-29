@@ -12,3 +12,43 @@
   display: block;
 }
  */
+body {
+  background-image: linear-gradient(to bottom right, grey, white);
+  margin: 5rem;
+}
+#profileBody {
+  background-image: linear-gradient(to bottom right, white, grey);
+  margin: 5rem;
+}
+.row {
+  margin-left: 0.7px;
+  margin-right: 0.7px;
+  margin-top: 35px;
+}
+.jumbotron {
+  background-color: dark grey;
+  text-align: center;
+}
+nav {
+  width: 25%;
+}
+
+.card-title {
+  text-align: center;
+}
+.card-text {
+  text-align: center;
+}
+
+.index-results {
+  text-align: center;
+}
+
+.btn btn-primary {
+  display: flex;
+  justify-content: center;
+}
+
+#bmiResults {
+  padding: 30px;
+}

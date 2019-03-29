@@ -120,9 +120,20 @@ $(document).ready(function() {
   $("#profile").on("click", function(e) {
     e.preventDefault();
     $("#main").empty();
+    var newDiv2 =
+      '<div class="row"><div class="card col-md-6 margin=100px" style="width: 18rem;"> <div id="firstCard" class="card-body"><h5 class="card-title">Your Current Goals</h5><p class="card-text">Enter in your current goals so you can look back and remind yourself where youre headed.</p><form><div class="form-group"><label for="date">Enter Todays Date</label><input type="date" class="form-control" id="currentDate"placeholder="Enter Current Date" /></div><div class="form-group" id="goals"><label for="goals" id="enter">Enter Your Health Goals</label><input type="text" class="form-control" id="goals1" placeholder="Enter Your Goals" /><button type="submit" class="btn btn-primary" id="Goals-Submit">Submit</button></div></form></div></div><div class="card col-md-6" style="width: 18rem;"><div id="yourcurretGoals"><h5 class="card-title">What Are Your Goals?</h5><p id="one">Your Current Goals</p>will display goals...</div></div>"';
+    $("#main").append(newDiv2);
     var chartDiv =
       "<canvas id='myChart' style='width:'400'; height:'400'></canvas>";
     $("#main").append(chartDiv);
     renderChart();
   });
+
+  /*  $("#Goals-Submit").on("click", function(e) {
+    e.preventDefault();
+    var goals = $("#goals").val();
+    var goals2 = $("#currrentDate").val();
+
+    $("#yourcurrentGoals").append(goals); */
+  //});
 });

@@ -1,28 +1,29 @@
 function renderChart() {
-  /* var userBmi = retrieveBmi();
+  var userBmi = retrieveBmi();
 
   var userDate = retrieveDate();
   var userWeight = retrieveWeight();
- */
+
   /* setTimeout(function(){
 
   }) */
-  chartInfo();
+  console.log(userBmi);
+  chartInfo(userBmi);
 }
 
-function chartInfo(yData) {
-  var ctx = $("#myChart");
+function chartInfo(yyy) {
+  var ctx = document.getElementById("myChart").getContext("2d");
   var myChart = new Chart(ctx, {
     type: "line",
     data: {
-      labels: [1, 2, 3, 8, 9],
-      data: [
+      labels: ["A", "T", "W", "T", "F", "S", "S"],
+      datasets: [
         {
-          label: "num",
-          data: retrieveBmi()
+          label: "BMI",
+          data: [1, 2, 3, 4, 5],
+          backgroundColor: "rgba(153,255,51,0.4)"
         }
       ]
-    },
-    options: {}
+    }
   });
 }
