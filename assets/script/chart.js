@@ -7,20 +7,21 @@ function renderChart() {
   /* setTimeout(function(){
 
   }) */
+
   console.log(userBmi);
-  chartInfo(userBmi);
+  chartInfo(userDate, userBmi);
 }
 
-function chartInfo(yyy) {
-  var ctx = document.getElementById("myChart").getContext("2d");
+function chartInfo(xdata, ydata) {
+  var ctx = $("#myChart");
   var myChart = new Chart(ctx, {
     type: "line",
     data: {
-      labels: ["A", "T", "W", "T", "F", "S", "S"],
+      labels: xdata,
       datasets: [
         {
           label: "BMI",
-          data: [1, 2, 3, 4, 5],
+          data: ydata,
           backgroundColor: "rgba(153,255,51,0.4)"
         }
       ]

@@ -1,4 +1,5 @@
 function writeUserData(userId, email) {
+  console.log("2");
   database.ref("users/" + userId).set({
     email: email
   });
@@ -33,7 +34,7 @@ function retrieveDate() {
     snapshot.forEach(function(childSnapshot) {
       var childData = childSnapshot.val();
       var childDate = childData.dateAdded;
-      dateList.push(childDate);
+      dateList.push(parseFloat(childDate));
     });
   });
   return dateList;

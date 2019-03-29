@@ -99,10 +99,27 @@ $(document).ready(function() {
     e.preventDefault();
     var email = $("#inputEmail").val();
     var password = $("#inputPassword").val();
+
+    var promise1 = new Promise(function(resolve, reject) {
+      debugger;
+      return signUpNewUser(email, password, resolve);
+    })
+      .then(function() {
+        var useruid = auth.currentUser.uid;
+        return useruid;
+      })
+      .then(function(userId) {
+        return writeUserData(useruid, email);
+      })
+      .catch(function(err) {
+        return err;
+      });
+    /* 
     signUpNewUser(email, password);
+    writeUserData(userId, email);
     setTimeout(function() {
       writeUserData(userId, email);
-    }, 5000);
+    }, 5000); */
   });
 
   $("#loginBtn").on("click", function(e) {

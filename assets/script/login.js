@@ -26,8 +26,11 @@ auth.onAuthStateChanged(function(user) {
   }
 });
 
-function signUpNewUser(email, password) {
+function signUpNewUser(email, password, resolve) {
   auth.createUserWithEmailAndPassword(email, password);
+  console.log(resolve);
+  console.log("1");
+  resolve();
 }
 
 function loginUser(email, password) {
