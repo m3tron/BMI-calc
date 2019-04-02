@@ -100,7 +100,7 @@ $(document).ready(function() {
     var email = $("#inputEmail").val();
     var password = $("#inputPassword").val();
 
-    var promise1 = new Promise(function(resolve, reject) {
+    /*  var promise1 = new Promise(function(resolve, reject) {
       debugger;
       return signUpNewUser(email, password, resolve);
     })
@@ -113,13 +113,13 @@ $(document).ready(function() {
       })
       .catch(function(err) {
         return err;
-      });
-    /* 
+      }); */
+
     signUpNewUser(email, password);
     writeUserData(userId, email);
     setTimeout(function() {
       writeUserData(userId, email);
-    }, 5000); */
+    }, 5000);
   });
 
   $("#loginBtn").on("click", function(e) {
